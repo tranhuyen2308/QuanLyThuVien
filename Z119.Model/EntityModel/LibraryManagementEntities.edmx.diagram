@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26efb78064f64c2189fbbddb7a134364" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryManagementModel.Author" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Book" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.BookShelf" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Borrower" Width="1.5" PointX="7.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Category" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Position" Width="1.5" PointX="3" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Publisher" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Reader" Width="1.5" PointX="5.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Role" Width="1.5" PointX="6" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.SpecialCategory" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Specialized" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.Unit" Width="1.5" PointX="3" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryManagementModel.User" Width="1.5" PointX="8.25" PointY="24.125" IsExpanded="true" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Book_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Book_BookShelf" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Book_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Book_Publisher" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Book_SpecialCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Borrower_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Borrower_Reader" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Category_Specialized" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Reader_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_User_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_Reader_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryManagementModel.FK_User_Unit" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

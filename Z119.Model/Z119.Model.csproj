@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2569CF8-9900-45F5-8523-E5B418F77DA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Z119.Model</RootNamespace>
+    <AssemblyName>Z119.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel\ResultModel.cs" />
+    <Compile Include="Bindingmodel\AuthorBindingModel.cs" />
+    <Compile Include="Bindingmodel\BaseBindingModel.cs" />
+    <Compile Include="Bindingmodel\BookBindingModel.cs" />
+    <Compile Include="Bindingmodel\BookShelfBindingModel.cs" />
+    <Compile Include="Bindingmodel\BorrowerBindingModel.cs" />
+    <Compile Include="Bindingmodel\CategoryBindingModel.cs" />
+    <Compile Include="Bindingmodel\PositionBindingModel.cs" />
+    <Compile Include="Bindingmodel\PublisherBindingModel.cs" />
+    <Compile Include="Bindingmodel\ReaderBindingModel.cs" />
+    <Compile Include="Bindingmodel\ReportModel.cs" />
+    <Compile Include="Bindingmodel\RoleBindingModel.cs" />
+    <Compile Include="Bindingmodel\SpecialCategoryBindingModel.cs" />
+    <Compile Include="Bindingmodel\SpecializedBindingModel.cs" />
+    <Compile Include="Bindingmodel\UnitBindingModel.cs" />
+    <Compile Include="Bindingmodel\UserBindingModel.cs" />
+    <Compile Include="EntityModel\Author.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Book.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\BookShelf.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Borrower.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Category.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\LibraryManagementEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagementEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\LibraryManagementEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\LibraryManagementEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagementEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Position.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Publisher.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Reader.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Role.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\SpecialCategory.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Specialized.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\sp_helpdiagrams_Result.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\sysdiagram.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\Unit.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModel\User.cs">
+      <DependentUpon>LibraryManagementEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="EntityModel\LibraryManagementEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryManagementEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityModel\LibraryManagementEntities.edmx.diagram">
+      <DependentUpon>LibraryManagementEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityModel\LibraryManagementEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagementEntities.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagementEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityModel\LibraryManagementEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagementEntities.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagementEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

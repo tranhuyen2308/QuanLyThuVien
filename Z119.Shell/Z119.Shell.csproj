@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53C44DDB-081A-4F65-8B11-E6CBE100330F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Z119.Shell</RootNamespace>
+    <AssemblyName>Z119.Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlCustom\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlCustom\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DelegateLogin.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcControl\ucAuthor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucAuthor.Designer.cs">
+      <DependentUpon>ucAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucBook.Designer.cs">
+      <DependentUpon>ucBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucBookShelf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucBookShelf.Designer.cs">
+      <DependentUpon>ucBookShelf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucBorrowBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucBorrowBook.Designer.cs">
+      <DependentUpon>ucBorrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucCategory.Designer.cs">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucPosition.Designer.cs">
+      <DependentUpon>ucPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucProfileInfos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucProfileInfos.Designer.cs">
+      <DependentUpon>ucProfileInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucPublisher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucPublisher.Designer.cs">
+      <DependentUpon>ucPublisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucReader.Designer.cs">
+      <DependentUpon>ucReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucReportAll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucReportAll.Designer.cs">
+      <DependentUpon>ucReportAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucRole.Designer.cs">
+      <DependentUpon>ucRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucSpecialCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucSpecialCategory.Designer.cs">
+      <DependentUpon>ucSpecialCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucUnit.Designer.cs">
+      <DependentUpon>ucUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\ucUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\ucUser.Designer.cs">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcControl\usSpecialized.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcControl\usSpecialized.Designer.cs">
+      <DependentUpon>usSpecialized.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucAuthor.resx">
+      <DependentUpon>ucAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucBook.resx">
+      <DependentUpon>ucBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucBookShelf.resx">
+      <DependentUpon>ucBookShelf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucBorrowBook.resx">
+      <DependentUpon>ucBorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucCategory.resx">
+      <DependentUpon>ucCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucPosition.resx">
+      <DependentUpon>ucPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucProfileInfos.resx">
+      <DependentUpon>ucProfileInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucPublisher.resx">
+      <DependentUpon>ucPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucReader.resx">
+      <DependentUpon>ucReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucReportAll.resx">
+      <DependentUpon>ucReportAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucRole.resx">
+      <DependentUpon>ucRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucSpecialCategory.resx">
+      <DependentUpon>ucSpecialCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucUnit.resx">
+      <DependentUpon>ucUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\ucUser.resx">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcControl\usSpecialized.resx">
+      <DependentUpon>usSpecialized.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Z119.Model.Bindingmodel.SpecializedBindingModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Z119.Business\Z119.Business.csproj">
+      <Project>{76b98022-cbbe-4947-8653-c9fb8b285f12}</Project>
+      <Name>Z119.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z119.Common\Z119.Common.csproj">
+      <Project>{a9252994-71f2-4e63-b56a-1dbdb7bd1e37}</Project>
+      <Name>Z119.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z119.Model\Z119.Model.csproj">
+      <Project>{f2569cf8-9900-45f5-8523-e5b418f77da3}</Project>
+      <Name>Z119.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
